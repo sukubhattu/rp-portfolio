@@ -5,7 +5,24 @@
 	crossorigin="anonymous"
 />
 
-{% block page_content %}{% endblock %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+	</button>
+			<ul class="navbar-nav">
+					<li class="nav-item">
+							<a class="nav-link" href="{% url "project_index" %}">Projects <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="{% url "blog_index" %}">Blog</a>
+					</li>
+			</ul>
+	</div>
+</nav>
+
+
+<div class="container">{% block page_content %}{% endblock %}</div>
 
 <script
 	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
