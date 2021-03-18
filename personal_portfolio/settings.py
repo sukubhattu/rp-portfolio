@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "sandeshModel",
     "sandeshORM",
+    "geoLocation",
 ]
 
 MIDDLEWARE = [
