@@ -21,4 +21,5 @@ urlpatterns = [
     path("projects/", include("projects.urls")),
     path("blog/", include("blog.urls")),
     path("geo/", include("geoLocation.urls")),
+    path("github/", include("githubAPI.urls")),
 ]

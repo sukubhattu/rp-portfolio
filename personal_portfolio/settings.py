@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "sandeshModel",
     "sandeshORM",
     "geoLocation",
+    "githubAPI",
 ]
 
 MIDDLEWARE = [
