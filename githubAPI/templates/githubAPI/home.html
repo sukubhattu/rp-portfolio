@@ -1,0 +1,24 @@
+<h1>GitHub API</h1>
+<form method="POST">
+	{% csrf_token %}
+	<input type="text" name="username" />
+	<button type="submit">search on github</button>
+</form>
+
+{% if users %} {% for user in users %}
+<div
+	style="
+		display: inline-block;
+		margin: 20px;
+		border: 1px solid #ccc;
+		padding: 20px;
+		text-align: center;
+		width: 150px;
+		max-width: 150px;
+	"
+>
+	<p>username: <a href="{{user.html_url}}">{{user.login}}</a></p>
+	<img src="{{user.avatar_url}}" alt="" style="height: 80px" />
+</div>
+<!-- <p>{{user}}</p> -->
+{% endfor %} {% endif %}
