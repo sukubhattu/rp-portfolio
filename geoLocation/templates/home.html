@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				{{geodata.ip}}
+			</tr>
+			<tr>
+				{{geodata.continent_name}}
+			</tr>
+			<tr>
+				{{geodata.country_name}}
+			</tr>
+			<tr>
+				{{geodata.region_code}}
+			</tr>
+			<tr>
+				{{geodata.region_name}}
+			</tr>
+			<tr>
+				{{geodata.city}}
+			</tr>
+			<tr>
+				{{geodata.zip}}
+			</tr>
+		</table>
+
+		<iframe
+			src="https://maps.google.com/maps?q={{geodata.latitude}},{{geodata.longitude}}&hl=es;z=14&amp;output=embed"
+		></iframe>
+
+		<img
+			src="{{geodata.location.country_flag}}"
+			alt="country_flag"
+			style="height: 180px"
+		/>
+	</body>
+</html>
